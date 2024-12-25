@@ -7,9 +7,12 @@ function NumberGuess() {
   let lives = document.getElementById("lives");
   let input = document.getElementById("input");
   let remainingGuess = document.getElementById("remainingGuess");
+  let para = document.getElementById("para");
 
   if (Number(input.value) === 7) {
-    console.log("Correct Guess");
+    remainingGuess.innerHTML = "Correct Guess";
+    restart.style.display = "block";
+    para.innerHTML = "";
   } else {
     liveCount--;
     remainingGuesses--;
